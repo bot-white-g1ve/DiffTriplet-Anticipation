@@ -34,10 +34,9 @@ def get_best_epochs(result_dir, prefix, suffix, mode, subset, repeat_ids, split_
                     results[r_id, s_id, e_id] = 0
                     print(exception, result_file)
 
-	results = results.mean(0).mean(0)
-	best_epochs, best_value = _get_best_epochs(results, epochs, window_size)
-
-	return best_epochs, best_value
+    results = results.mean(0).mean(0)
+    best_epochs, best_value = _get_best_epochs(results, epochs, window_size)
+    return best_epochs, best_value
 
 
 def get_result(result_dir, prefix, suffix, mode, subset, repeat_ids, split_ids, epochs, result_key='AP_IVT'):

@@ -1,3 +1,6 @@
+import os
+import numpy as np
+
 # Global Setting
 platform_used = "google cloud"
 prefix_used = "RDV-T45OneSmo5"
